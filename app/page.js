@@ -12,12 +12,12 @@ const poppins = Poppins({
 
 export default function Home() {
   return (
-    <main className={`${poppins.className} `}>
-      <div className='h-screen w-full relative'>
+    <main className={`${poppins.className} relative m-4 md:m-6 `}>
+      <div className='h-screen relative'>
         <Navbar />
-        <div className='px-4 md:px-6 mt-9 py-5'>
+        <div className=' mt-9 py-5'>
           <div className='font-black text-left w-full relative flex items-center justify-start'>
-            <h1 className='text-[2rem] leading-10'>
+            <h1 className='text-[2rem] md:text-[60px] leading-10 md:leading-none'>
               <span>
                 PURSUE <br />A{" "}
               </span>
@@ -28,23 +28,28 @@ export default function Home() {
               <span>HEALTHCARE CAREER</span>
             </h1>
           </div>
-          <div className='mt-[11px]'>
-            <p className='text-[0.875rem] text-slate-700 mb-[36px]'>
+          <div className='mt-[11px] mb-[20px] '>
+            <p className='text-[0.85rem] text-secondary/80 '>
               Begin a healthcare career, create a lasting difference.
             </p>
           </div>
         </div>
 
-        <div className='w-full h-[342px] relative mx-4'>
-          <div className='w-[269px] h-[296px] left-0 top-[46px] absolute bg-white border border-secondary' />
-          <div className='w-[212px] h-[237px] left-[120px] top-0 absolute bg-primary' />
-          <div className='w-[237px] h-[272px] left-[16px] top-[58px] absolute'>
+        <div className='h-[342px] md:h-[360px] relative rounded-[30px] '>
+          <Image
+            fill
+            src='/hero-large.png'
+            className='object-cover rounded-[30px] hidden md:flex'
+          />
+          <div className='w-[269px] h-[296px] left-0 top-[46px] absolute bg-white border border-secondary/80 md:hidden' />
+          <div className='w-[212px] h-[237px]  top-0 right-0 absolute bg-primary md:hidden' />
+          <div className='w-[237px] h-[272px] left-[16px] top-[58px] absolute md:hidden'>
             <div className='relative h-full w-full'>
               <Image src='/hero.png' fill objectFit='cover' />
             </div>
           </div>
         </div>
-        <div className='px-4 w-full flex items-center justify-center mt-6'>
+        <div className='px-4 w-full flex items-center justify-center mt-8'>
           <FontAwesomeIcon
             icon={faAnglesDown}
             beatFade

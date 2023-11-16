@@ -28,23 +28,23 @@ const Links = [
 
 function Navbar() {
   return (
-    <div className='p-4 md:p-6 flex items-center justify-between'>
+    <div className='relative flex items-center justify-between'>
       <div className='relative h-[48px] w-[95px]'>
         <Image src='/logo-text.svg' fill />
       </div>
       <div>
-        <div className='hidden md:flex items-center gap-[50px]'>
+        <div className='hidden md:flex items-center gap-[50px] border border-secondary py-1 rounded-full pr-1 pl-6'>
           <div className='flex gap-10 items-center'>
             {Links.map(({ title, link }) => (
               <div key={title}>
-                <Link className='text-black text-[14px] font-light' href={link}>
+                <Link className='text-black text-[12px] font-light' href={link}>
                   {title}
                 </Link>
               </div>
             ))}
           </div>
           <div>
-            <button className='text-black text-[13px] border border-accent px-[25px] py-[10px] rounded-full font-semibold'>
+            <button className='text-black text-[12px] border border-accent px-[25px] py-[8px] rounded-full font-semibold'>
               Contact
             </button>
           </div>
