@@ -127,7 +127,7 @@ export default function Home() {
 
               <Link
                 href='#'
-                className='flex items-center gap-2 text-white/75 font-medium pb-4 md:pb-0 '>
+                className='flex items-center gap-2 text-white/75 font-medium pb-10 md:pb-0 '>
                 <span className='underline underline-offset-4'>LEARN MORE</span>{" "}
                 <span>
                   <FontAwesomeIcon icon={faArrowRight} fade />
@@ -147,6 +147,18 @@ export default function Home() {
             />
           </div>
         </div>
+      </div>
+      <div className='relative my-16'>
+        <h5 className='text-secondary text-center  italic px-4 w-[300px]  mx-auto md:w-[600px] text-lg md:text-xl'>
+          <span className='font-bold'>
+            “I follow three rules: do the right thing, do your best, and always
+            show people you care.”
+          </span>
+          <br />
+          <br />
+
+          <span className='underline underline-offset-4'>Lou Holtz1</span>
+        </h5>
       </div>
     </main>
   );
