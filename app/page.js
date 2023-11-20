@@ -150,7 +150,7 @@ export default function Home() {
       </div>
       <div className='relative my-16'>
         <h5 className='text-secondary text-center  italic px-4 w-[300px]  mx-auto md:w-[600px] text-lg md:text-xl'>
-          <span className='font-bold'>
+          <span className='font-bold text-accent'>
             “I follow three rules: do the right thing, do your best, and always
             show people you care.”
           </span>
