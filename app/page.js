@@ -5,10 +5,14 @@ import Navbar from "./components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAnglesDown,
-  faAngleRight,
-  faArrowRight,
+  faStethoscope,
+  faHeart,
+  faPeopleGroup,
+  faSpa,
+  faUserDoctor,
 } from "@fortawesome/free-solid-svg-icons";
 import localFont from "next/font/local";
+import Faqs from "./components/Faqs";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,10 +23,42 @@ const pnb_font = localFont({
   src: "../public/assets/fonts/fancy/pnb.ttf",
 });
 
+const boska_Regular = localFont({
+  src: "../public/assets/fonts/fancy/Bosca.ttf",
+});
+
+const items = [
+  {
+    icon: <FontAwesomeIcon icon={faUserDoctor} />,
+
+    paragraph: "Highly skilled and experienced healthcare professionals",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faStethoscope} />,
+
+    paragraph: "State-of-the-art medical infrastructure and technology",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faHeart} />,
+
+    paragraph: "Commitment to personalized patient care and attention",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faSpa} />,
+
+    paragraph: "Emphasis on preventive healthcare and wellness programs",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faPeopleGroup} />,
+
+    paragraph: "Strong community involvement and social responsibility",
+  },
+];
+
 export default function Home() {
   return (
     <main className={`${poppins.className} relative  `}>
-      <div className='relative  m-4 md:m-6'>
+      <div className='relative  p-4 md:p-6'>
         <Navbar />
         <div className=' mt-9 py-5'>
           <div className='font-black text-left w-full relative flex items-center justify-start'>
@@ -38,7 +74,7 @@ export default function Home() {
             </h1>
           </div>
           <div className='mt-[11px] mb-[20px] '>
-            <p className='text-[0.85rem] text-secondary/80 '>
+            <p className='text-[0.85rem] text-secondary/80 md:text-[14px] '>
               Begin a healthcare career, create a lasting difference.
             </p>
           </div>
@@ -88,69 +124,48 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='relative my-3 bg-primary h-full md:h-[500px] px-4 md:px-0 grid grid-cols-1 md:grid-cols-2'>
-        <div>
-          <h4 className='flex items-center gap-3 text-lg  md:px-6 py-4'>
-            <span className='text-white font-light'>About Us</span>
-            <span>
-              <FontAwesomeIcon
-                icon={faAngleRight}
-                style={{ color: "#00CCCC", fontSize: "16px" }}
-              />
-            </span>
-            <span className='text-white font-bold'>Who We Are</span>
-          </h4>
-          <div className='relative w-full'>
-            <div className='relative h-[180px] mb-10 md:hidden '>
-              <Image
-                src='/aboutImage.png'
-                alt='about hashi image'
-                fill
-                className='rounded-xl object-cover'
-                loading='lazy'
-              />
-            </div>
-            <div className='md:absolute md:left-6 md:top-[6.25rem] md:w-[500px]'>
-              <h2 className='text-white font-bold text-lg'>
-                Hashi Capacity and Care is a premier healthcare company based in
-                Kenya.
-              </h2>
-              <p className='text-white/75 text-[0.9375rem] my-5'>
-                {" "}
-                We are dedicated to providing exceptional medical services,
-                focusing on improving the well-being of individuals and
-                communities across the country. With a team of highly skilled
-                professionals and state-of-the-art facilities, we strive to
-                deliver high-quality healthcare services that meet the diverse
-                needs of our patients.
-              </p>
+      <div className='relative border-y-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-28 md:grid-cols-2 md:py-20'>
+        <div className='relative md:flex md:flex-col md:justify-center   '>
+          <p className='uppercase font-medium text-sm text-primary mb-2'>
+            Hashi Capacity
+          </p>
+          <h5 className={`${boska_Regular.className} text-5xl mb-6 text-left `}>
+            About
+          </h5>
+          <p className='text-secondary  md:max-w-[450px] text-[0.85rem] md:text-[14px] mb-6 md:pr-24'>
+            Hashi Capacity and Care is a premier healthcare company based in
+            Kenya.
+            <br />
+            <br />
+            We are dedicated to providing exceptional medical services, focusing
+            on improving the well-being of individuals and communities across
+            the country. With a team of highly skilled professionals and
+            state-of-the-art facilities, we strive to deliver high-quality
+            healthcare services that meet the diverse needs of our patients.
+          </p>
 
-              <Link
-                href='#'
-                className='flex items-center gap-2 text-white/75 font-medium pb-10 md:pb-0 '>
-                <span className='underline underline-offset-4'>LEARN MORE</span>{" "}
-                <span>
-                  <FontAwesomeIcon icon={faArrowRight} fade />
-                </span>
-              </Link>
-            </div>
-          </div>
+          <Link
+            href='#'
+            className='text-sm  underline underline-offset-8 cursor-pointer hover:underline-offset-4 transition ease-in duration-300 text-accent'>
+            EXPLORE MORE
+          </Link>
         </div>
-        <div>
-          <div className='relative h-full  '>
+        <div className='relative mt-10 md:mt-0  flex  md:items-center md:justify-end  '>
+          <div className='relative w-full md:w-[351px] h-[300px] md:h-[498px] '>
             <Image
               src='/aboutImage.png'
-              alt='about hashi image'
               fill
-              className='object-cover aspect-square'
+              alt='about hashi'
+              className='object-cover'
               loading='lazy'
             />
           </div>
         </div>
       </div>
+
       <div className='relative my-16'>
         <h5 className='text-secondary text-center  italic px-4 w-[300px]  mx-auto md:w-[600px] text-lg md:text-xl'>
-          <span className='font-bold text-accent'>
+          <span className='font-light text-secondary'>
             “I follow three rules: do the right thing, do your best, and always
             show people you care.”
           </span>
@@ -160,6 +175,141 @@ export default function Home() {
           <span className='underline underline-offset-4'>Lou Holtz1</span>
         </h5>
       </div>
+
+      <div className='relative border-y-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-28 md:grid-cols-2 md:py-20'>
+        <div className='relative mt-5 md:mt-0 mb-8  flex items-center  '>
+          <div className='relative w-full md:w-[351px] h-[300px] md:h-[498px] '>
+            <Image
+              src='/services.png'
+              fill
+              alt='health services image'
+              className='object-cover '
+              loading='lazy'
+            />
+          </div>
+        </div>
+        <div className='relative md:flex md:flex-col md:justify-center md:pl-24  '>
+          <p className='uppercase font-medium text-sm text-primary mb-1 md:mb-3'>
+            What we do{" "}
+          </p>
+          <h5
+            className={`${boska_Regular.className} text-5xl  mb-6 text-left `}>
+            Services
+          </h5>
+          <p className='text-secondary md:max-w-[450px] md:text-[14px] text-[0.85rem] mb-6'>
+            Our commitment to healthcare excellence is evident in the range of
+            services we offer.
+            <br />
+            <br />
+            From comprehensive patient-focused solutions to specialized medical
+            staffing, our dedicated team ensures that diverse healthcare needs
+            are met with precision and expertise.
+          </p>
+
+          <Link
+            href='#'
+            className='text-sm text-accent underline underline-offset-8 cursor-pointer hover:underline-offset-4 transition ease-in duration-300'>
+            EXPLORE MORE
+          </Link>
+        </div>
+      </div>
+      <div className='relative border-b-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-28  md:py-20'>
+        <h5
+          className={`${boska_Regular.className} text-5xl mb-6 text-left md:text-center `}>
+          Why Choose Us
+        </h5>
+        <div className='grid grid-cols-1 md:grid-cols-5 md:gap-2 mb-12 md:mb-20'>
+          {items.map(({ icon, paragraph }, index) => (
+            <div
+              className='border-b-[0.5px] border-secondary/30 py-8'
+              key={index}>
+              <p className='mb-6 text-[25px] text-primary md:text-center'>
+                {icon}
+              </p>
+              <p className='text-secondary/95 text-[0.85rem] md:text-center md:text-xs'>
+                {paragraph}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className='mb-9'>
+          <h6
+            className={`${boska_Regular.className} text-4xl text-primary mb-6 text-left md:text-center `}>
+            Our Mission
+          </h6>
+          <p className='text-secondary/95 md:text-center text-[0.85rem] md:text-[18px]'>
+            To enhance the health and wellness of the Kenyan population by
+            delivering personalized, compassionate, and accessible healthcare
+            solutions.
+          </p>
+        </div>
+        <div>
+          <h6
+            className={`${boska_Regular.className} text-primary text-4xl mb-6 text-left md:text-center `}>
+            Our Vision
+          </h6>
+          <p className='text-secondary/95 md:text-center text-[0.85rem] md:text-[18px]'>
+            To be the leading healthcare provider in Kenya, setting industry
+            benchmarks through exceptional patient care, innovation, and
+            community involvement.
+          </p>
+        </div>
+      </div>
+      <div className='relative border-y-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-28 md:grid-cols-2 md:py-20 bg-primary w-full'>
+        <div className='relative md:flex md:flex-col md:justify-center mb-3  '>
+          <p className='uppercase font-medium text-sm text-black mb-3'>
+            GET IN TOUCH
+          </p>
+          <h5
+            className={`${boska_Regular.className} text-5xl mb-6 text-left text-white `}>
+            Contact Us
+          </h5>
+          <p className='mb-6 md:pr-10 text-[0.85rem] md:text-[14px] text-white'>
+            Interested in joining our team or simply reaching out? Whether
+            you're exploring career opportunities or have inquiries, we're here
+            for you. Fill out the form and click send to get in touch with us.
+            Let us know if you're interested in collaboration or if you have
+            general questions. We look forward to connecting with you.
+          </p>
+        </div>
+        <div className='relative mt-3 md:mt-0    '>
+          <div className='relative w-full  md:flex  md:items-center md:justify-end'>
+            <form className='grid grid-cols-1 gap-2  relative '>
+              <div>
+                <input
+                  type='text'
+                  className='outline-none border-[0.5px] border-gray-400 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
+                  placeholder='Full Name'
+                />
+              </div>
+              <div>
+                <input
+                  type='text'
+                  className='outline-none border-[0.5px] border-gray-400 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
+                  placeholder='Email'
+                />
+              </div>
+              <div>
+                <input
+                  type='text'
+                  className='outline-none border-[0.5px] border-gray-400 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
+                  placeholder='Mobile Number'
+                />
+              </div>
+              <div>
+                <textarea
+                  type='text'
+                  rows={3}
+                  className='outline-none border-[0.5px] border-gray-400 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
+                  placeholder='Message'
+                />
+              </div>
+              <button className='mt-4 bg-white py-2 rounded-lg'>SEND</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <Faqs />
     </main>
   );
 }
