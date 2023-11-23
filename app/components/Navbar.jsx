@@ -30,7 +30,7 @@ function Navbar() {
   return (
     <div className='relative flex items-center justify-between'>
       <div className='relative h-[48px] w-[95px]'>
-        <Image src='/logo-text.svg' fill />
+        <Image src='/logo-text.svg' fill alt='Hashi logo' />
       </div>
       <div>
         <div className='hidden md:flex items-center gap-[50px] border border-secondary py-1 rounded-full pr-1 pl-6'>
@@ -51,7 +51,7 @@ function Navbar() {
         </div>
       </div>
       <div className='relative h-[16px] w-[30px] md:hidden'>
-        <Image src='./menubar.svg' fill />
+        <Image src='./menubar.svg' fill alt='navigation bar' />
       </div>
     </div>
   );

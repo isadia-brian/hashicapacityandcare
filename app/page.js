@@ -86,6 +86,7 @@ export default function Home() {
             src='/hero-large.png'
             className='object-cover rounded-[30px] hidden md:flex'
             priority
+            alt='hero image'
           />
           <div className='w-[269px] h-[296px] left-0 top-[46px] absolute bg-white border border-secondary/80 md:hidden' />
           <div className='w-[212px] h-[237px]  top-0 right-0 absolute bg-primary md:hidden' />
@@ -96,6 +97,7 @@ export default function Home() {
                 fill
                 className='object-fit object-cover'
                 priority
+                alt='hero image'
               />
             </div>
           </div>
@@ -265,10 +267,10 @@ export default function Home() {
             Contact Us
           </h5>
           <p className='mb-6 md:pr-10 text-[0.85rem] md:text-[14px] text-white'>
-            Interested in joining our team or simply reaching out? Whether
-            you're exploring career opportunities or have inquiries, we're here
+            Interested in joining our team or simply reaching out? Whether you
+            are exploring career opportunities or have inquiries, we are here
             for you. Fill out the form and click send to get in touch with us.
-            Let us know if you're interested in collaboration or if you have
+            Let us know if you are interested in collaboration or if you have
             general questions. We look forward to connecting with you.
           </p>
         </div>

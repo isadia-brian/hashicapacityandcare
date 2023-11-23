@@ -31,7 +31,7 @@ const Footer = () => {
       className={`${poppins.className} px-4 py-12 md:px-6 md:pt-20 md:pb-0 bg-secondary/5`}>
       <div className='flex flex-col md:flex-row md:justify-between md:border-b-[0.5px] md:border-secondary/50'>
         <div className='relative h-[48px] w-[95px] mb-10'>
-          <Image src='/logo-text.svg' fill />
+          <Image src='/logo-text.svg' fill alt='hashi logo' />
         </div>
         <div className='pb-12 border-b-[0.5px] border-secondary/50 md:border-none md:flex md:gap-[100px]'>
           <div className='mb-10'>
