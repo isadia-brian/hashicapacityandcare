@@ -6,6 +6,11 @@ import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import Link from "next/link";
 import Image from "next/image";
+import image1 from "@/public/caregiver.png";
+import image2 from "@/public/diagnose.jpg";
+import image3 from "@/public/wellness.jpg";
+import image4 from "../../public/test.jpg";
+const images = [image1, image2, image3, image4];
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -201,6 +206,37 @@ const Services = () => {
                 </div>
               </div>
               <div className='border-b-[0.5px] border-secondary/75 mb-6  mt-8 w-full'></div>
+              <div className='flex gap-5 mt-[100px] overflow-x-scroll md:overscroll-x-none'>
+                {images.map((image, index) => {
+                  return (
+                    <div
+                      className='relative h-[350px] w-[250px] min-w-[250px]'
+                      key={index}>
+                      <Image
+                        src={image}
+                        fill
+                        alt='services image'
+                        className='object-cover object-center'
+                        loading='lazy'
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+              <div className='my-[130px] text-center'>
+                <h5 className={`${boska_Regular.className} text-5xl mb-8`}>
+                  Like What You See ?
+                </h5>
+                <p className='text-secondary mb-16'>
+                  Interested in working with us ? or just saying Hi feel free to
+                  contact us and have a chat
+                </p>
+                <Link
+                  href='/contact'
+                  className='border-[0.5px] border-accent px-6 py-3 rounded-full'>
+                  CONTACT US
+                </Link>
+              </div>
             </div>
           </div>
         </>
