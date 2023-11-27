@@ -91,12 +91,21 @@ const Services = () => {
                     className={`${boska_Regular.className} text-[3rem] leading-[-1rem] md:text-[4rem]`}>
                     Services
                   </h1>
-                  <p className='text-secondary'>
-                    At Hashi Capacity and Care, we believe that everyone
-                    deserves access to excellent healthcare. We are here to
-                    provide exceptional medical services, promote a healthy
-                    lifestyle, and contribute to the well-being of the Kenyan
-                    population.
+                  <p className='text-secondary text-sm'>
+                    At Hashi Capacity and Care, our esteemed healthcare services
+                    elevate standards in patient care. Specializing in
+                    connecting top-tier medical professionals with leading
+                    healthcare organizations, we ensure an unmatched commitment
+                    to quality and expertise.
+                  </p>
+                  <br />
+                  <p className='text-secondary text-sm'>
+                    From comprehensive patient-focused solutions to specialized
+                    medical staffing, our services cater to diverse healthcare
+                    needs. Whether you are in search of skilled healthcare
+                    professionals or exploring innovative care solutions, Hashi
+                    Capacity and Care is your dedicated partner for excellence
+                    in healthcare services.
                   </p>
                 </div>
               </div>
