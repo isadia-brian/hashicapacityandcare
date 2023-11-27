@@ -1,7 +1,8 @@
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "700", "800", "900"],
@@ -14,19 +15,23 @@ const Links = [
   },
   {
     title: "About",
-    link: "#",
+    link: "/about",
   },
   {
     title: "Services",
-    link: "#",
+    link: "/services",
   },
   {
     title: "Careers",
-    link: "#",
+    link: "/careers",
   },
 ];
 
-function Navbar() {
+function Navbar({ navOpen, setNavOpen }) {
+  const handleShowNav = () => {
+    setNavOpen(!navOpen);
+  };
+
   return (
     <div className='relative flex items-center justify-between'>
       <div className='relative h-[48px] w-[95px]'>
@@ -50,9 +55,26 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className='relative h-[16px] w-[30px] md:hidden'>
-        <Image src='./menubar.svg' fill alt='navigation bar' />
-      </div>
+      {navOpen ? (
+        <>
+          {" "}
+          <div className='relative  md:hidden' onClick={handleShowNav}>
+            <FontAwesomeIcon
+              icon={faCircleXmark}
+              className='text-white text-[1.675rem]'
+            />
+          </div>
+        </>
+      ) : (
+        <>
+          {" "}
+          <div
+            className='relative h-[16px] w-[30px] md:hidden'
+            onClick={handleShowNav}>
+            <Image src='./menubar.svg' fill alt='navigation bar' />
+          </div>
+        </>
+      )}
     </div>
   );
 }

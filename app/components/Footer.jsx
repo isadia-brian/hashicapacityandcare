@@ -14,15 +14,15 @@ const Links = [
   },
   {
     title: "About",
-    link: "#",
+    link: "/about",
   },
   {
     title: "Services",
-    link: "#",
+    link: "/services",
   },
   {
     title: "Careers",
-    link: "#",
+    link: "/careers",
   },
 ];
 const Footer = () => {
@@ -52,17 +52,33 @@ const Footer = () => {
           </div>
           <div className='mb-10'>
             <h6 className='uppercase font-normal text-[15px] md:text-[13px] mb-3'>
+              Address
+            </h6>
+            <div className='flex flex-col gap-3'>
+              <p className='text-black text-[14px] md:text-[12px] font-light'>
+                P.O BOX 80100-41864
+              </p>
+              <p className='text-black text-[14px] md:text-[12px] font-light'>
+                Oleander Drive
+              </p>
+              <p className='text-black text-[14px] md:text-[12px] font-light'>
+                Mombasa
+              </p>
+            </div>
+          </div>
+          <div className='mb-10'>
+            <h6 className='uppercase font-normal text-[15px] md:text-[13px] mb-3'>
               Contact
             </h6>
             <div className='flex flex-col gap-3'>
               <Link
                 className='text-black text-[14px] md:text-[12px] font-light'
-                href='#'>
+                href='tel:0721203790'>
                 Phone
               </Link>
               <Link
                 className='text-black text-[14px] md:text-[12px] font-light'
-                href='#'>
+                href='mailto:info@hashicapacityandcare.org'>
                 Email
               </Link>
             </div>
