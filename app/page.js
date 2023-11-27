@@ -96,6 +96,7 @@ export default function Home() {
             <div className='flex flex-col gap-7'>
               {Links.map(({ link, title }) => (
                 <Link
+                  key={title}
                   href={link}
                   className={`${boska_Regular.className} text-5xl font-medium`}
                   onClick={() => setNavOpen(false)}>

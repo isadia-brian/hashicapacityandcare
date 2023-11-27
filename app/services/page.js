@@ -34,7 +34,7 @@ const Links = [
   },
 ];
 
-const page = () => {
+const Services = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <div className={`${poppins.className} relative`}>
@@ -49,6 +49,7 @@ const page = () => {
             <div className='flex flex-col gap-7'>
               {Links.map(({ link, title }) => (
                 <Link
+                  key={title}
                   href={link}
                   className={`${boska_Regular.className} text-5xl font-medium`}
                   onClick={() => setNavOpen(false)}>
@@ -208,4 +209,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Services;
