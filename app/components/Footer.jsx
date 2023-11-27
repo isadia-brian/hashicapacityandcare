@@ -24,6 +24,10 @@ const Links = [
     title: "Careers",
     link: "/careers",
   },
+  {
+    title: "Contact",
+    link: "/contact",
+  },
 ];
 const Footer = () => {
   return (

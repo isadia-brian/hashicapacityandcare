@@ -38,7 +38,7 @@ function Navbar({ navOpen, setNavOpen }) {
         <Image src='/logo-text.svg' fill alt='Hashi logo' />
       </div>
       <div>
-        <div className='hidden md:flex items-center gap-[50px] border border-secondary py-1 rounded-full pr-1 pl-6'>
+        <div className='hidden md:flex items-center gap-[50px] border border-secondary py-3 rounded-full pr-1 pl-6'>
           <div className='flex gap-10 items-center'>
             {Links.map(({ title, link }) => (
               <div key={title}>
@@ -49,9 +49,11 @@ function Navbar({ navOpen, setNavOpen }) {
             ))}
           </div>
           <div>
-            <button className='text-black text-[12px] border border-accent px-[25px] py-[8px] rounded-full font-semibold'>
+            <Link
+              href='/contact'
+              className='text-black text-[12px] border border-accent px-[25px] py-[10px] rounded-full font-semibold'>
               Contact
-            </button>
+            </Link>
           </div>
         </div>
       </div>
