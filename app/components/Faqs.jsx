@@ -49,7 +49,7 @@ const Faqs = () => {
           className={`${boska_Regular.className} text-5xl mb-6 text-left text-primary `}>
           FAQS
         </h5>
-        <p className='text-secondary text-[0.85rem]'>
+        <p className='text-secondary text-[0.85rem md:text-[12px]'>
           Questions we get regularly
         </p>
       </div>

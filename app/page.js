@@ -116,24 +116,19 @@ export default function Home() {
         </div>
       ) : (
         <>
-          <div className='relative  p-4 md:p-6'>
-            <div className=' mt-20 py-5'>
-              <div className='font-black text-left w-full relative flex items-center justify-start'>
-                <h1 className='text-[2rem] md:text-[60px] leading-10 md:leading-none'>
-                  <span>
-                    PURSUE <br />A{" "}
-                  </span>
-                  <span className='text-accent'>
-                    REWARDING
-                    <br />
-                  </span>
-                  <span>HEALTHCARE CAREER</span>
+          <div className='relative  p-4 md:p-6 lg:max-w-[1200px] md:mx-auto'>
+            <div className=' mt-28 md:mt-36 py-5 mb-4 md:mb-20'>
+              <div className='font-bold text-left w-full relative flex items-center justify-start'>
+                <h1 className='text-[20px] md:text-[50px] text-secondary lg:text-[50px] lg:max-w-[800px] leading-snug  md:leading-tight'>
+                  <span className='text-primary font-extrabold'>
+                    Hashi Capacity
+                  </span>{" "}
+                  is an agency providing expert recruitment and staffing for{" "}
+                  <span className='text-primary font-extrabold'>
+                    healthcare
+                  </span>{" "}
+                  professionals
                 </h1>
-              </div>
-              <div className='mt-[11px] mb-[20px] '>
-                <p className='text-[0.85rem] text-secondary/80 md:text-[14px] '>
-                  Begin a healthcare career, create a lasting difference.
-                </p>
               </div>
             </div>
 
@@ -183,7 +178,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='relative border-y-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-28 md:grid-cols-2 md:py-20'>
+          <div className='relative border-y-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-6 lg:px-24 md:grid-cols-2 md:py-20'>
             <div className='relative md:flex md:flex-col md:justify-center   '>
               <p className='uppercase font-medium text-sm text-primary mb-2'>
                 Hashi Capacity
@@ -192,9 +187,10 @@ export default function Home() {
                 className={`${boska_Regular.className} text-5xl mb-6 text-left `}>
                 About
               </h5>
-              <p className='text-secondary  md:max-w-[450px] text-[0.85rem] md:text-[14px] mb-6 md:pr-24'>
-                Hashi Capacity and Care is a premier healthcare company based in
-                Kenya.
+              <p className='text-secondary  md:max-w-[450px] text-[0.85rem] md:text-[16px] mb-6 lg:pr-10'>
+                Hashi Capacity and Care is a premier healthcare agency based in
+                Kenya, providing top-tier staffing and recruitment solutions for
+                the industry.
                 <br />
                 <br />
                 We are dedicated to providing exceptional medical services,
@@ -237,44 +233,94 @@ export default function Home() {
             </h5>
           </div>
 
-          <div className='relative border-y-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-28 md:grid-cols-2 md:py-20'>
-            <div className='relative mt-5 md:mt-0 mb-8  flex items-center  '>
-              <div className='relative w-full md:w-[351px] h-[300px] md:h-[498px] '>
-                <Image
-                  src='/services.png'
-                  fill
-                  alt='health services image'
-                  className='object-cover '
-                  loading='lazy'
-                />
-              </div>
-            </div>
-            <div className='relative md:flex md:flex-col md:justify-center md:pl-24  '>
-              <p className='uppercase font-medium text-sm text-primary mb-1 md:mb-3'>
-                What we do{" "}
+          <div className='relative border-y-[0.5px] text-secondary grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-6 lg:px-16 md:grid-cols-4 md:py-20 gap-10'>
+            <div className='relative   '>
+              <p className='uppercase font-medium text-sm text-primary mb-2'>
+                What we do
               </p>
               <h5
-                className={`${boska_Regular.className} text-5xl  mb-6 text-left `}>
+                className={`${boska_Regular.className} text-5xl mb-6 text-left `}>
                 Services
               </h5>
-              <p className='text-secondary md:max-w-[450px] md:text-[14px] text-[0.85rem] mb-6'>
-                Our commitment to healthcare excellence is evident in the range
-                of services we offer.
-                <br />
-                <br />
-                From comprehensive patient-focused solutions to specialized
-                medical staffing, our dedicated team ensures that diverse
-                healthcare needs are met with precision and expertise.
-              </p>
+            </div>
+            <div></div>
 
-              <Link
-                href='/services'
-                className='text-sm text-accent underline underline-offset-8 cursor-pointer hover:underline-offset-4 transition ease-in duration-300'>
-                EXPLORE MORE
-              </Link>
+            <div className='-mt-16 md:-mt-0'>
+              <p className='text-accent text-5xl font-medium'>01</p>
+              <h5 className='text-primary my-4 uppercase'>
+                Staffing & Recruitment
+              </h5>
+              <p className='text-[0.85rem md:text-[12px]'>
+                We train, develop, and seamlessly link skilled healthcare-giving
+                professionals with organizations in the industry, fostering a
+                harmonious partnership that enhances the delivery of exceptional
+                care.
+              </p>
+            </div>
+
+            <div>
+              <p className='text-accent text-5xl font-medium'>02</p>
+              <h5 className='text-primary my-4 uppercase'>Primary Care</h5>
+              <p className='text-[0.85rem md:text-[12px]'>
+                We provide comprehensive primary healthcare services to
+                individuals of all ages, ensuring regular check-ups, preventive
+                care, and early intervention.
+              </p>
+            </div>
+            <div>
+              <p className='text-accent text-5xl font-medium'>03</p>
+              <h5 className='text-primary my-4 uppercase'>
+                Specialized Medical Care
+              </h5>
+              <p className='text-[0.85rem md:text-[12px]'>
+                Our team of specialists offers expert care in various medical
+                fields, including cardiology, oncology, pediatrics, gynecology,
+                orthopedics, and more
+              </p>
+            </div>
+            <div>
+              <p className='text-accent text-5xl font-medium'>04</p>
+              <h5 className='text-primary my-4 uppercase'>
+                Diagnostic Services
+              </h5>
+              <p className='text-[0.85rem md:text-[12px]'>
+                We offer advanced diagnostic services such as laboratory tests,
+                radiology, ultrasounds, and medical imaging to aid accurate
+                diagnosis and effective treatment plans.
+              </p>
+            </div>
+            <div>
+              <p className='text-accent text-5xl font-medium'>05</p>
+              <h5 className='text-primary my-4 uppercase'>Emergency Care</h5>
+              <p className='text-[0.85rem md:text-[12px]'>
+                Our 24/7 emergency department is equipped to handle medical
+                emergencies promptly and efficiently, ensuring immediate care
+                when needed.
+              </p>
+            </div>
+            <div>
+              <p className='text-accent text-5xl font-medium'>06</p>
+              <h5 className='text-primary my-4 uppercase'>Wellness Programs</h5>
+              <p className='text-[0.85rem md:text-[12px]'>
+                We promote holistic well-being through wellness programs that
+                focus on nutrition, fitness, mental health, and overall
+                lifestyle improvements.
+              </p>
+            </div>
+            <div>
+              <p className='text-accent text-5xl font-medium'>07</p>
+              <h5 className='text-primary my-4 uppercase'>
+                Community Outreach
+              </h5>
+              <p className='text-[0.85rem md:text-[12px]'>
+                We actively engage with local communities, organizing health
+                camps, educational workshops, and awareness campaigns to promote
+                health and disease prevention
+              </p>
             </div>
           </div>
-          <div className='relative border-b-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-28  md:py-20'>
+
+          <div className='relative border-b-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-6 lg:px-16  md:py-20'>
             <h5
               className={`${boska_Regular.className} text-5xl mb-6 text-left md:text-center `}>
               Why Choose Us
@@ -287,7 +333,7 @@ export default function Home() {
                   <p className='mb-6 text-[25px] text-primary md:text-center'>
                     {icon}
                   </p>
-                  <p className='text-secondary/95 text-[0.85rem] md:text-center md:text-xs'>
+                  <p className='text-secondary/95 text-[0.85rem md:text-[12px] md:text-center md:text-xs'>
                     {paragraph}
                   </p>
                 </div>
@@ -298,7 +344,7 @@ export default function Home() {
                 className={`${boska_Regular.className} text-4xl text-primary mb-6 text-left md:text-center `}>
                 Our Mission
               </h6>
-              <p className='text-secondary/95 md:text-center text-[0.85rem] md:text-[18px]'>
+              <p className='text-secondary/95 md:text-center text-[0.85rem md:text-[12px]  max-w-[600px] mx-auto'>
                 To enhance the health and wellness of the Kenyan population by
                 delivering personalized, compassionate, and accessible
                 healthcare solutions.
@@ -309,7 +355,7 @@ export default function Home() {
                 className={`${boska_Regular.className} text-primary text-4xl mb-6 text-left md:text-center `}>
                 Our Vision
               </h6>
-              <p className='text-secondary/95 md:text-center text-[0.85rem] md:text-[18px]'>
+              <p className='text-secondary/95 md:text-center text-[0.85rem md:text-[12px] text-[0.85rem md:text-[12px max-w-[600px] mx-auto'>
                 To be the leading healthcare provider in Kenya, setting industry
                 benchmarks through exceptional patient care, innovation, and
                 community involvement.
@@ -318,14 +364,14 @@ export default function Home() {
           </div>
           <div className='relative border-y-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-28 md:grid-cols-2 md:py-20 bg-primary w-full'>
             <div className='relative md:flex md:flex-col md:justify-center mb-3  '>
-              <p className='uppercase font-medium text-sm text-black mb-3'>
+              <p className='uppercase font-medium text-sm text-secondary mb-3'>
                 GET IN TOUCH
               </p>
               <h5
                 className={`${boska_Regular.className} text-5xl mb-6 text-left text-white `}>
                 Contact Us
               </h5>
-              <p className='mb-6 md:pr-10 text-[0.85rem] md:text-[14px] text-white'>
+              <p className='mb-6 md:pr-10 text-[0.85rem md:text-[12px] text-secondary'>
                 Interested in joining our team or simply reaching out? Whether
                 you are exploring career opportunities or have inquiries, we are
                 here for you. Fill out the form and click send to get in touch
@@ -344,7 +390,7 @@ export default function Home() {
                   <div>
                     <input
                       type='text'
-                      className='outline-none border-[0.5px] border-gray-400 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
+                      className='outline-none border-[0.5px] border-gray-700 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
                       placeholder='Full Name'
                       value={name}
                       onChange={(e) => setName(e.target.value)}
@@ -354,7 +400,7 @@ export default function Home() {
                   <div>
                     <input
                       type='text'
-                      className='outline-none border-[0.5px] border-gray-400 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
+                      className='outline-none border-[0.5px] border-gray-700 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
                       placeholder='Email'
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -364,7 +410,7 @@ export default function Home() {
                   <div>
                     <input
                       type='text'
-                      className='outline-none border-[0.5px] border-gray-400 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
+                      className='outline-none border-[0.5px] border-gray-700 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
                       placeholder='Mobile Number'
                       value={mobile}
                       onChange={(e) => setMobile(e.target.value)}
@@ -374,7 +420,7 @@ export default function Home() {
                     <textarea
                       type='text'
                       rows={3}
-                      className='outline-none border-[0.5px] border-gray-400 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
+                      className='outline-none border-[0.5px] border-gray-700 w-full md:w-[350px] px-2 py-2 rounded-lg bg-primary/10'
                       placeholder='Message'
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
