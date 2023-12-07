@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import Link from "next/link";
+import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -66,8 +67,66 @@ const About = () => {
       ) : (
         <>
           <div className='relative  p-4 md:p-6'>
-            <div className=' mt-20 py-5'>
-              <h1>About</h1>
+            <div className=' mt-28 md:mt-36 py-5 mb-4 md:mb-2'>
+              <h1 className=' font-extrabold text-[40px] md:text-[50px] leading-snug  md:leading-tight'>
+                About Us
+              </h1>
+              <p className='mt-[30px] md:mt-[80px] font-bold text-[18px] md:text-[50px] md:leading-tight md:text-center'>
+                We are a distinguished healthcare agency headquartered in Kenya,
+                delivering exemplary staffing and recruitment solutions for the
+                industry.
+              </p>
+              <p className='mt-5 text-sm md:text-center md:mt-10 max-w-[500px] mx-auto'>
+                Equipped with a proficient team and cutting-edge facilities, we
+                endeavor to provide premium healthcare services tailored to the
+                varied needs of our patients.
+              </p>
+              <div className='mt-[60px] md:mt-[100px]'>
+                <div className='grid grid-cols-1 gap-5 md:grid-cols-2 items-center'>
+                  <div className='md:text-center'>
+                    <h5
+                      className={`${boska_Regular.className} text-4xl text-primary mb-6 text-left md:text-center `}>
+                      OUR MISSION
+                    </h5>
+                    <p className='text-sm md:max-w-[400px] md:mx-auto'>
+                      To enhance the health and wellness of the Kenyan
+                      population by delivering personalized, compassionate, and
+                      accessible healthcare solutions.
+                    </p>
+                  </div>
+                  <div className='relative h-[300px] md:h-[408px] md:aspect-square'>
+                    <Image
+                      src='/mission.jpg'
+                      fill
+                      alt='mission image'
+                      className='object-cover'
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className='mt-[60px] md:mt-[100px] md:px-16'>
+                <div className='grid grid-cols-1 gap-5 md:grid-cols-2 items-center'>
+                  <div className='relative h-[300px] md:h-[408px] md:aspect-square '>
+                    <Image
+                      src='/vision.jpg'
+                      fill
+                      alt='mission image'
+                      className='object-fit'
+                    />
+                  </div>
+                  <div className='md:pr-10'>
+                    <h5
+                      className={`${boska_Regular.className} text-4xl text-primary mb-6 text-left md:text-center `}>
+                      OUR VISION
+                    </h5>
+                    <p className='text-sm md:max-w-[420px] md:mx-auto md:text-center '>
+                      To be the leading healthcare provider in Kenya, setting
+                      industry benchmarks through exceptional patient care,
+                      innovation, and community involvement.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </>
