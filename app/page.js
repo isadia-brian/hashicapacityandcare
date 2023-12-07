@@ -39,10 +39,7 @@ const Links = [
     title: "About",
     link: "/about",
   },
-  {
-    title: "Services",
-    link: "/services",
-  },
+
   {
     title: "Careers",
     link: "/careers",
@@ -178,7 +175,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='relative border-y-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-6 lg:px-24 md:grid-cols-2 md:py-20'>
+          <div className='relative border-y-[0.5px] grid grid-cols-1 border-secondary/30 py-12 px-4 md:px-6 lg:px-16 md:grid-cols-2 md:py-20'>
             <div className='relative md:flex md:flex-col md:justify-center   '>
               <p className='uppercase font-medium text-sm text-primary mb-2'>
                 Hashi Capacity

@@ -29,10 +29,7 @@ const Links = [
     title: "About",
     link: "/about",
   },
-  {
-    title: "Services",
-    link: "/services",
-  },
+
   {
     title: "Careers",
     link: "/careers",
@@ -45,6 +42,7 @@ const Links = [
 
 const Services = () => {
   const [navOpen, setNavOpen] = useState(false);
+
   return (
     <div className={`${poppins.className} relative`}>
       <div className='fixed w-full left-0 p-4 top-1 z-50'>
