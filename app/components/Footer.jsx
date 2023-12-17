@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "700", "800", "900"],
+import localFont from "next/font/local";
+const poppins_text = localFont({
+  src: "../../public/assets/fonts/poppins/Poppins-Regular.ttf",
+});
+const poppins_medium = localFont({
+  src: "../../public/assets/fonts/poppins/Poppins-Medium.ttf",
 });
 
 const Links = [
@@ -29,14 +31,15 @@ const Links = [
 const Footer = () => {
   return (
     <div
-      className={`${poppins.className} px-4 py-12 md:px-6 md:pt-20 md:pb-0 bg-secondary/5`}>
+      className={`${poppins_text.className} px-4 md:px-8 py-10 bg-secondary/5`}>
       <div className='flex flex-col md:flex-row md:justify-between md:border-b-[0.5px] md:border-secondary/50'>
         <div className='relative h-[48px] w-[95px] mb-10'>
           <Image src='/logo-text.svg' fill alt='hashi logo' />
         </div>
-        <div className='pb-12 border-b-[0.5px] border-secondary/50 md:border-none md:flex md:gap-[100px]'>
+        <div className='pb-12 border-b-[0.5px] border-secondary/50 md:border-none md:flex md:gap-[70px]'>
           <div className='mb-10'>
-            <h6 className='uppercase font-normal text-[15px] md:text-[13px] mb-3'>
+            <h6
+              className={` ${poppins_medium.className} uppercase font-normal text-[15px] md:text-[13px] mb-3`}>
               Navigation
             </h6>
             <div className='flex flex-col gap-3'>
@@ -52,7 +55,8 @@ const Footer = () => {
             </div>
           </div>
           <div className='mb-10'>
-            <h6 className='uppercase font-normal text-[15px] md:text-[13px] mb-3'>
+            <h6
+              className={` ${poppins_medium.className} uppercase font-normal text-[15px] md:text-[13px] mb-3`}>
               Address
             </h6>
             <div className='flex flex-col gap-3'>
@@ -68,7 +72,8 @@ const Footer = () => {
             </div>
           </div>
           <div className='mb-10'>
-            <h6 className='uppercase font-normal text-[15px] md:text-[13px] mb-3'>
+            <h6
+              className={` ${poppins_medium.className} uppercase font-normal text-[15px] md:text-[13px] mb-3`}>
               Contact
             </h6>
             <div className='flex flex-col gap-3'>

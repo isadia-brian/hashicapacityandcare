@@ -18,10 +18,15 @@ module.exports = {
       msf: { paintOrder: "markers stroke fill" },
     },
     extend: {
+      screens: {
+        lg: "1056px",
+      },
       colors: {
-        primary: "#0FF386",
-        secondary: "#666666",
-        accent: "#00CCCC",
+        primary: "#05FF00",
+        secondary: "#485460",
+        accent: "#FF6347",
+        background: "#F5F5F5",
+        card: "#e9f6e9",
       },
       animation: {
         marquee: "marquee 20s linear infinite",
